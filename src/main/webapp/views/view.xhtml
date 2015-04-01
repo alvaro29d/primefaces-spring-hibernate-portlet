@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+		<script name="jquery/jquery.js" library="primefaces"></script>
+		<title>Register Employee</title>
+	</h:head>
+	<h:form>
+		<p:growl id="messages"></p:growl>
+		<p:panelGrid columns="2">
+			<p:outputLabel value="Enter Employee Name:"></p:outputLabel>
+			<p:inputText value="#{registerEmployee.employee.employeeName}"></p:inputText>
+			<p:outputLabel value="Enter Employee Hire Date:"></p:outputLabel>
+			<p:calendar value="#{registerEmployee.employee.employeeHireDate}"></p:calendar>
+			<p:outputLabel value="Enter Employee Salary:"></p:outputLabel>
+			<p:inputText value="#{registerEmployee.employee.employeeSalary}"></p:inputText>
+		</p:panelGrid>
+		<p:commandButton value="Register" styleClass="btn-primary"
+			action="#{registerEmployee.register}" update="messages"></p:commandButton>
+		<p:commandButton value="Register" styleClass="btn-primary lfr-delegate-click"
+			action="#{registerEmployee.register}" update="messages"></p:commandButton>
+	</h:form>
+</f:view>
