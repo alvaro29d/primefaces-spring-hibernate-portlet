@@ -10,7 +10,7 @@
 		<script name="jquery/jquery.js" library="primefaces"></script>
 		<title>Register Employee</title>
 	</h:head>
-	<h:form>
+	<h:form class="form-inline">
 		<p:growl id="messages"></p:growl>
 		<p:panelGrid columns="2">
 			<p:outputLabel value="Enter Employee Name:"></p:outputLabel>
@@ -20,9 +20,9 @@
 			<p:outputLabel value="Enter Employee Salary:"></p:outputLabel>
 			<p:inputText value="#{registerEmployee.employee.employeeSalary}"></p:inputText>
 		</p:panelGrid>
-		<p:commandButton value="Register" styleClass="btn-primary"
+		<p:commandButton value="Register" styleClass="btn"
 			action="#{registerEmployee.register}" update="messages"></p:commandButton>
-		<p:commandButton value="Register" styleClass="btn-primary lfr-delegate-click"
+		<p:commandButton value="Register" styleClass="btn-primary"
 			action="#{registerEmployee.register}" update="messages"></p:commandButton>
 	</h:form>
 </f:view>
